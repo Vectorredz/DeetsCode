@@ -1,0 +1,3 @@
+def LHS(nums: list[int]):
+    ...
+    

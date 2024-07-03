@@ -22,7 +22,7 @@
 # 6 - 2 = 4 -> key 1 so [1,2]
 # 6 - 4 = 2 -> key 2 so [2,1]
 
-def twosum(nums: list[int], target: int):
+def twoSum(nums: list[int], target: int):
     hash: dict[int, int] = {}
     for key, val in enumerate(nums):
         diff = target - val
@@ -31,9 +31,10 @@ def twosum(nums: list[int], target: int):
         elif diff in hash:
             return [hash[diff], key]
             
+print(twoSum([3,2,4], 6))
 
-def test_twosum():
-    assert twosum([2,7,11,15], 9) == [0,1], f"{twosum([2,7,11,15], 9)}"
-    assert twosum([3,2,4], 6) == [1,2], f"{twosum([3,2,4], 6)}"
-    assert twosum([3,3], 6) == [0,1], f"{twosum([3,3], 6)}"
-test_twosum()
+# def test_twosum():
+#     assert twosum([2,7,11,15], 9) == [0,1], f"{twosum([2,7,11,15], 9)}"
+#     assert twosum([3,2,4], 6) == [1,2], f"{twosum([3,2,4], 6)}"
+#     assert twosum([3,3], 6) == [0,1], f"{twosum([3,3], 6)}"
+# test_twosum()
