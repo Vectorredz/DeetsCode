@@ -1,21 +1,18 @@
-def binarySearch(s: str, target: int):
-    if len(s) % 2 != 0:
-        midpoint = int(s[len(s) // 2])
-        new_s = list(s[:])
-        # while len(new_s) != 1:
-        for _ in range(2):
-            if target < midpoint:
-                new_s = new_s[:(s.index(str(midpoint)))]
-                midpoint = int(s[len(new_s) // 2])
-            elif target > midpoint:
-                new_s = new_s[(s.index(str(midpoint)))+1:]
-                midpoint = int(s[len(new_s) // 2])
-            
-            
-    return new_s, midpoint
-    
-print(binarySearch('12345678910',4))
+def search(nums: list[int], target: int):
+    low: int = 0
+    high: int = len(nums)-1
+    while low <= high:
+        midpoint = low + (high-low) // 2
+        mid_value = nums[midpoint]
+        if mid_value == target: 
+            return midpoint
+        elif target < mid_value:
+            high = midpoint - 1
+        else:
+            low = midpoint + 1
+    return -1
 
-# midpoint = [1]
-
-# print(midpoint[len(midpoint) // 2])
+def test_cases():
+    assert search( [-1,0,3,5,9,12], 9) == 4
+    assert search( [-1,0,3,5,9,12], 2) == -1
+test_cases()
