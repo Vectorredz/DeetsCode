@@ -1,6 +1,5 @@
 def countNegatives(grid: list[list[int]]):
     # rows, cols = len(grid)-1, len(grid[0])
-    lists = []
     count: int = 0
     maxRet: int = 0
     for i in range(len(grid)):

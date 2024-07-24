@@ -3,7 +3,7 @@ def maxSubnumsaySumCircular(nums: list[int]):
     maxSum = nums[0]
     for i in range(len(nums)):
         for j in range(i, len(nums)):
-            print(nums[i:(j+1)] + nums[j:])
+            print(nums[i:(j+1)] + nums[j:(i)])
             # currSum = sum(nums[i:(j+1)%(len(nums)+1)] + nums[j:(i+1)%(len(nums)+1)])
             # maxSum = max(maxSum, currSum)
     return maxSum

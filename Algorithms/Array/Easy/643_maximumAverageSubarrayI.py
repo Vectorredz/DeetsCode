@@ -11,17 +11,6 @@
 
 # print(findMaxAverage([1,12,-5,-6,50,3], 4))
 
-def findMaxAverage(nums: list[int], k: int):
-    curSum: int = sum(nums[:k])
-    ret: int = curSum
-    for r in range(len(nums)+k):
-        print(r)
-    #     curSum += - nums[r-k] + nums[r]
-    #     ret = max(ret, curSum)
-    # return ret / k 
-            
-
-print(findMaxAverage([1,12,-5,-6,50,3], 4))
 
 def findMaxAverage(nums: list[int], k: int) -> float:
     curSum = sum(nums[:k])  # Initialize sum for the first k elements
@@ -39,10 +28,6 @@ print(findMaxAverage([1,12,-5,-6,50,3], 4))
 # -5 -6 50 3 = 42
 
 # 4 0 4 3 3 
-
-
-
-
 
 # def test_cases():
 #     assert findMaxAverage([1,12,-5,-6,50,3], 4) == 12.75000

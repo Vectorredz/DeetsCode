@@ -1,6 +1,5 @@
 def deleteGreatestValue(grid: list[list[int]]):
     rows = len(grid)
-    cols = len(grid[0])
     sumRet = 0
     while len(grid[0]) > 0:
         currMax = 0

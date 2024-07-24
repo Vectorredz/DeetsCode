@@ -1,16 +1,4 @@
-def extract_sublists(numbers):
-    sublists = []
-    n = len(numbers)
-    for i in range(n):
-        for j in range(n):
-            if numbers[i] > numbers[j]:
-                if i < j:
-                    sublists.append(numbers[i+1:j])
-                elif i > j:
-                    sublists.append(numbers[j+1:i])
-    return sublists
+arr = [[1,2,3], [2,3,4]]
+ret = list(filter(lambda x: x[0] if x[0] == 1 else '', arr))
 
-# Example usage
-numbers = [20, 50, 60, 30]
-sublists = extract_sublists(numbers)
-print(sublists)
+print(ret)

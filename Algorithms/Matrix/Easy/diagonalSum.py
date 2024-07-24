@@ -1,6 +1,4 @@
 def diagonalSum(mat: list[list[int]]):
-    r: int = 0
-    l: int = 0
     currSum = 0
     center = len(mat) // 2
     for i in range(len(mat)):
@@ -12,8 +10,6 @@ def diagonalSum(mat: list[list[int]]):
     else:
         return currSum
     
-
-
 print(diagonalSum([[1,1,1,1],
                 [1,1,1,1],
                 [1,1,1,1],

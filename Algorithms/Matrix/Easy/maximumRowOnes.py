@@ -1,7 +1,6 @@
 def rowAndMaximumOnes(mat: list[list[int]]):
     rows, cols = len(mat), len(mat[0])
     currSum = 0
-    currRet  = 0
     maxRet = 0
     lists = []
     hashmap: dict[int, int] = {}
@@ -14,8 +13,6 @@ def rowAndMaximumOnes(mat: list[list[int]]):
         if maxRet == hashmap[k]:
             lists.append(k)
     return [min(lists), maxRet]
-
-    
             
 def test_cases():
     assert rowAndMaximumOnes([[0,0],[1,1],[0,0]]) == [1,2]

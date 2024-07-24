@@ -1,0 +1,3 @@
+def kWeakestRows(mat: list[list[int, int]]):
+    ...
+    
